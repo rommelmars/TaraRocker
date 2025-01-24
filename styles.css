@@ -1,0 +1,108 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1e3a8a; /* Main gradient blue */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; /* Set text color to white */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Bona Nova SC', serif; /* Apply the new font */
+}
+
+.logo img {
+    margin-right: 15px;
+    height: 80px; /* Adjust the height as needed */
+}
+
+.logo span {
+    font-size: 2.5rem; /* Increase font size */
+    color: transparent; /* Initial color transparent */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Add more shadows */
+                 4px 4px 8px rgba(0, 0, 0, 0.3),
+                 6px 6px 12px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px; /* Add spacing between letters */
+    opacity: 0; /* Initial state hidden */
+    transform: scale(0.8); /* Initial scale reduced */
+}
+
+/* Navigation styles */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.cta {
+    background-color: #e11d48;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background-color: #be123c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Hero section styles */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2rem; /* Reduce font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 880px;
+    margin: 0 auto 20px auto;
+    font-family: 'Libre Baskerville', serif; /* Apply the new font */
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-section button {
+    background-color: #e11d48;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-section button:hover {
+    background-color: #be123c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

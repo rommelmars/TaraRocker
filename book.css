@@ -1,0 +1,219 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1e3a8a;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Bona Nova SC', serif;
+}
+
+.logo img {
+    margin-right: 15px;
+    height: 50px;
+}
+
+.logo span {
+    font-size: 2rem;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.3), 6px 6px 12px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    font-family: 'Garamond', serif;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(153, 6, 244, 1);
+    color: #9906f4;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: purple; /* Change the active link color to purple */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    background: white;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    width: 25px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(180deg, #FFC0CB, #FF0000);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+/* Book details section styles */
+.book-details {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.book-container {
+    width: 100%; /* Make the container take up the full width */
+    max-width: 1400px; /* Increase the max-width to provide more space */
+    margin: 40px auto; /* Center the container and add margin to create gap spaces towards the header */
+    padding: 20px; /* Add padding to create white gaps on the left and right */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    position: relative;
+    top: -30px; /* Move the container up into the header */
+}
+
+.book-info {
+    flex: 1 1 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the content to the top */
+}
+
+.book-info h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-family: 'Garamond', serif;
+}
+
+.book-info p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-family: 'Garamond', serif;
+}
+
+.book-info .order-button {
+    align-self: center; /* Center the button within the book-info container */
+}
+
+.book-image {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-end; /* Align the image to the rightmost position */
+}
+
+.book-image img {
+    width: 100%;
+    max-width: 600px; /* Increase the max-width to make the image bigger */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.book-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Button styles */
+.order-button {
+    background-color: #ff69b4; /* Pink background color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Ensure the text is centered within the button */
+}
+
+.order-button:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Background color classes */
+.light-purple {
+    background-color: #e6e6fa; /* Light purple background color */
+}
+
+.light-blue {
+    background-color: #add8e6; /* Light blue background color */
+}
+
+.light-pink {
+    background-color: #ffb6c1; /* Light pink background color */
+}
+
+.light-red {
+    background-color: #ffcccb; /* Light red background color */
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000); /* Same color as header */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Garamond', serif;
+}

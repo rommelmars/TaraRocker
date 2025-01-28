@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,42 +16,62 @@
             <span id="logo-text">Snook & Gator Press</span>
         </div>
         <nav>
-            <a href="#">Books</a>
+            <a href="index.html">Home</a>
+            <a href="book.html">Books</a>
             <a href="#">Blogs</a>
             <a href="#">About Author</a>
             <a href="#">Contact Us</a>
-            <a href="#">Events</a>
         </nav>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     <section class="hero-section">
-        <h1>"The Adventures of Snook & Gator Series"</h1>
+        <h1 class="animated-title">"The Adventures of Snook & Gator Series"</h1>
+    </section>
+    <section class="author-section">
+        <div class="author-details">
+            <h2>Tara Rocker Bates</h2>
+            <p class="author-description">
+                Tara Rocker-Bates is a California native, who also has roots in Alabama. She is a mother of 3. Tara has a Masters of Social Work. Tara loves animation and cartoons. That love inspired her to write Children’s Books.
+            </p>
+            <button class="read-more-button">Read More</button>
+        </div>
+        <div class="author-image">
+            <img src="images/author.jpg" alt="Author">
+        </div>
     </section>
     <section class="books-section">
         <div class="book-container">
             <img src="images/book1.png" alt="Book 1">
             <div class="magnifying-glass"></div>
-            <h2>Book Title 1</h2>
-            <button class="order-button">Order Now</button>
+            <h2>The Adventures of Snook and Gator:Snook meets a Buddy</h2>
+            <a href="book.html" class="order-button">View Details</a>
         </div>
         <div class="book-container">
             <img src="images/book2.png" alt="Book 2">
             <div class="magnifying-glass"></div>
-            <h2>Book Title 2</h2>
-            <button class="order-button">Order Now</button>
+            <h2>The Adventures of Snook and Gator</h2>
+            <a href="book.html" class="order-button">View Details</a>
         </div>
         <div class="book-container">
             <img src="images/book3.png" alt="Book 3">
             <div class="magnifying-glass"></div>
-            <h2>Book Title 3</h2>
-            <button class="order-button">Order Now</button>
+            <h2>The Adventures of Snook and Gator:Too Many Bad Ideas</h2>
+            <a href="book.html" class="order-button">View Details</a>
         </div>
         <div class="book-container">
             <img src="images/book4.png" alt="Book 4">
             <div class="magnifying-glass"></div>
-            <h2>Book Title 4</h2>
-            <button class="order-button">Order Now</button>
+            <h2>The Adventures of Snook and Gator Snook’s Cool Idea for a Hot Day</h2>
+            <a href="book.html" class="order-button">View Details</a>
         </div>
     </section>
+    <footer>
+        <p>&copy; 2025 Snook & Gator Press. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

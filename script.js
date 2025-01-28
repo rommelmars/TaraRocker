@@ -10,4 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
         logoText.style.color = "white";
         logoText.style.transform = "scale(1)";
     }, 100);
+
+    // Highlight active navigation link
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+
+    // Toggle navigation menu on hamburger menu click
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const nav = document.querySelector("nav");
+
+    hamburgerMenu.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
 });

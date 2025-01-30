@@ -502,10 +502,11 @@ footer {
         align-items: center;
     }
     .author-image-1 img{
-        max-width: 45vw;
+        max-width: 47vw;
         margin-right: 10px;
-        border-radius: 10px;
-        
+        border-radius: 15px;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
     }
 
    

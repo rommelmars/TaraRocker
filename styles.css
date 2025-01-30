@@ -35,7 +35,7 @@ header {
 }
 
 .logo span {
-    font-size: 2.5rem;
+    font-size: 3vw;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.3), 6px 6px 12px rgba(0, 0, 0, 0.2);
     letter-spacing: 2px;
@@ -57,7 +57,7 @@ nav a {
     margin: 0 15px;
     font-weight: 400;
     font-family: 'Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
 
 nav a:hover {
@@ -376,6 +376,7 @@ nav a.active {
     font-family: 'New York Font', sans-serif; /* New York style font */
     color: black; /* Change font color to black */
     padding-right: 20px;
+    margin: 0 15px;
     flex: 1 1 300px;
 }
 
@@ -402,10 +403,15 @@ nav a.active {
     display: flex;
     justify-content: flex-end; /* Align the image to the right */
     align-items: center;
+    margin: 0 15px;
+}
+
+.author-image-1 {
+    display: none;
 }
 
 .author-image img {
-    max-width: 200px;
+    max-width: 35vw;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -475,7 +481,38 @@ footer {
     }
 }
 
+
+@media (max-width: 768px){
+    .logo span{
+        font-size: 4vw;
+    }
+
+    .hero-section h1{
+        text-shadow: 4px 1px 3.5px rgba(0, 0, 0, 90);
+
+    }
+    .author-image {
+        display: none;
+    }
+
+    .author-image-1{
+        flex: 1 1 200px;
+        display: flex;
+        justify-content: center; /* Align the image to the right */
+        align-items: center;
+    }
+    .author-image-1 img{
+        max-width: 45vw;
+        margin-right: 10px;
+        border-radius: 10px;
+        
+    }
+
+   
+}
+
 @media (max-width: 480px) {
+    
     .hero-section h1 {
         font-size: 1.5rem;
     }

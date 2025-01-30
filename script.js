@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const logoText = document.getElementById("logo-text");
     logoText.style.opacity = 0;
     logoText.style.color = "transparent";
@@ -11,13 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         logoText.style.transform = "scale(1)";
     }, 100);
 
-    // Highlight active navigation link
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add("active");
-        }
-    });
 
     // Toggle navigation menu on hamburger menu click
     const hamburgerMenu = document.querySelector(".hamburger-menu");
@@ -26,4 +19,43 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburgerMenu.addEventListener("click", () => {
         nav.classList.toggle("open");
     });
+
+    // Intersection Observer for scroll animations
+    const bookInfos = document.querySelectorAll(".book-info");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Trigger when 50% of the element is visible
+        }
+    );
+
+    bookInfos.forEach((bookInfo) => {
+        observer.observe(bookInfo);
+    });
+});
+
+const bookContainers = document.querySelectorAll(".book-container");
+
+const bookObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+    {
+        threshold: 0.5, // Trigger when 50% of the element is visible
+    }
+);
+
+bookContainers.forEach((bookContainer) => {
+    bookObserver.observe(bookContainer);
 });

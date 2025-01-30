@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 /* General styles */
 body {
     margin: 0;
@@ -178,37 +180,185 @@ nav a.active {
 }
 
 /* Button styles */
-.order-button {
-    background-color: #ff69b4; /* Pink background color */
-    padding: 10px 20px; /* Increase padding */
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.2rem; /* Increase font size */
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    align-self: center;
-    text-align: center;
+.order-button, .read-more-button {
+    position: relative;
     display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #ff69b4; /* Pink text color */
     text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border: 2px solid #ff69b4; /* Pink border */
+    background: transparent; /* Transparent background */
 }
 
-.order-button:hover {
-    background-color: #ff1493; /* Darker pink on hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+.order-button:hover, .read-more-button:hover {
+    background: #ff69b4; /* Pink background on hover */
+    color: #fff; /* White text color on hover */
+    box-shadow: 0 0 5px #ff69b4,
+                0 0 25px #ff69b4,
+                0 0 50px #ff69b4,
+                0 0 200px #ff69b4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
+.order-button span, .read-more-button span {
+    position: absolute;
+    display: block;
+}
+
+.order-button span:nth-child(1), .read-more-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff69b4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.order-button span:nth-child(2), .read-more-button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff69b4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.order-button span:nth-child(3), .read-more-button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff69b4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.order-button span:nth-child(4), .read-more-button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff69b4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+/* Hero section button styles */
 .hero-section button {
-    background-color: #e11d48;
-    padding: 10px 20px; /* Smaller padding */
-    border: none;
-    border-radius: 30px;
-    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #ff69b4; /* Pink text color */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border: 2px solid #ff69b4; /* Pink border */
+    background: transparent; /* Transparent background */
 }
 
 .hero-section button:hover {
-    background-color: #be123c;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: #ff69b4; /* Pink background on hover */
+    color: #fff; /* White text color on hover */
+    box-shadow: 0 0 5px #ff69b4,
+                0 0 25px #ff69b4,
+                0 0 50px #ff69b4,
+                0 0 200px #ff69b4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.hero-section button span {
+    position: absolute;
+    display: block;
+}
+
+.hero-section button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff69b4);
+    animation: animate1 1s linear infinite;
+}
+
+.hero-section button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff69b4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+.hero-section button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff69b4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+.hero-section button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff69b4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
 
 /* Author section styles */
@@ -223,7 +373,7 @@ nav a.active {
 
 .author-details {
     max-width: 60%;
-    font-family: 'Crimson Text', serif; /* Apply new font */
+    font-family: 'New York Font', sans-serif; /* New York style font */
     color: black; /* Change font color to black */
     padding-right: 20px;
     flex: 1 1 300px;
@@ -232,40 +382,19 @@ nav a.active {
 .author-details h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    font-family: 'Crimson Text', serif; /* Apply new font */
+    font-family: 'New York Font', sans-serif; /* New York style font */
     color: black; /* Change font color to black */
 }
 
 .author-details p {
     font-size: 1.2rem;
     line-height: 1.6;
-    font-family: 'Crimson Text', serif; /* Apply new font */
+    font-family: 'New York Font', sans-serif; /* New York style font */
     color: black; /* Change font color to black */
 }
 
 .author-description {
-    font-family: 'Shadows Into Light', cursive; /* Apply new font */
-}
-
-/* Read More button styles */
-.read-more-button {
-    background-color: #ff69b4; /* Pink background color */
-    padding: 10px 20px; /* Increase padding */
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.2rem; /* Increase font size */
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.read-more-button:hover {
-    background-color: #ff1493; /* Darker pink on hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    font-family: 'New York Font', sans-serif; /* New York style font */
 }
 
 .author-image {

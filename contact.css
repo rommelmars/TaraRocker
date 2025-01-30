@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
 /* General styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #fff;
-    background-color: #1e3a8a;
+    background-color: #e6e6fa; /* Light purple background color */
 }
 
 /* Header styles */
@@ -86,116 +84,77 @@ nav a.active {
     transition: 0.4s;
 }
 
-/* Book details section styles */
-.book-details {
-    text-align: center;
-    padding: 60px 20px;
+/* Contact section styles */
+.contact-section {
+    padding: 40px 20px;
     background-color: #f0f0f0;
     color: black;
-}
-
-.book-container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: -30px;
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'New York Font', sans-serif; /* New York style font */
 }
 
-.book-info {
-    flex: 1 1 50%;
-    text-align: left;
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
 }
 
-.book-info h2, .book-info p {
-    font-family: 'New York Font', sans-serif;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.book-info h2 {
-    font-size: 2rem;
-    margin: 20px 0;
-}
-
-.book-info p {
+.contact-section label {
     font-size: 1.2rem;
-    margin: 20px 0;
-    line-height: 1.6;
-    text-align: justify;
+    margin-bottom: 10px;
+    font-family: 'New York Font', sans-serif; /* New York style font */
 }
 
-.book-info.visible h2, .book-info.visible p {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.book-info .order-button {
-    align-self: center;
-    text-decoration: none;
-}
-
-.book-image {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.book-image img {
+.contact-section input,
+.contact-section textarea {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    animation: float 3s ease-in-out infinite;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'New York Font', sans-serif; /* New York style font */
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.book-image img:hover {
-    transform: scale(1.1) translateY(-10px);
-}
-
-/* Button styles */
-.order-button, .read-more-button {
+/* Contact Us button styles */
+.contact-section button {
     position: relative;
     display: inline-block;
     padding: 25px 30px;
     margin: 40px 0;
-    color: #ff69b4;
+    color: #ff69b4; /* Pink text color */
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
-    margin-right: 50px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    border: 2px solid #ff69b4;
-    background: transparent;
+    border: 2px solid #ff69b4; /* Pink border */
+    background: transparent; /* Transparent background */
+    cursor: pointer;
 }
 
-.order-button:hover, .read-more-button:hover {
-    background: #ff69b4;
-    color: #fff;
+.contact-section button:hover {
+    background: #ff69b4; /* Pink background on hover */
+    color: #fff; /* White text color on hover */
     box-shadow: 0 0 5px #ff69b4,
                 0 0 25px #ff69b4,
                 0 0 50px #ff69b4,
@@ -203,12 +162,12 @@ nav a.active {
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-.order-button span, .read-more-button span {
+.contact-section button span {
     position: absolute;
     display: block;
 }
 
-.order-button span:nth-child(1), .read-more-button span:nth-child(1) {
+.contact-section button span:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
@@ -226,7 +185,7 @@ nav a.active {
     }
 }
 
-.order-button span:nth-child(2), .read-more-button span:nth-child(2) {
+.contact-section button span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -245,7 +204,7 @@ nav a.active {
     }
 }
 
-.order-button span:nth-child(3), .read-more-button span:nth-child(3) {
+.contact-section button span:nth-child(3) {
     bottom: 0;
     right: 0;
     width: 100%;
@@ -264,7 +223,7 @@ nav a.active {
     }
 }
 
-.order-button span:nth-child(4), .read-more-button span:nth-child(4) {
+.contact-section button span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -283,26 +242,9 @@ nav a.active {
     }
 }
 
-/* Background color classes */
-.light-purple {
-    background-color: #e6e6fa;
-}
-
-.light-blue {
-    background-color: #add8e6;
-}
-
-.light-pink {
-    background-color: #ffb6c1;
-}
-
-.light-red {
-    background-color: #ffcccb;
-}
-
 /* Footer styles */
 footer {
-    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    background: linear-gradient(180deg, #FFC0CB, #FF0000); /* Same color as header */
     padding: 20px;
     text-align: center;
     color: white;

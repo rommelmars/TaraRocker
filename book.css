@@ -6,6 +6,7 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: #1e3a8a;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header styles */
@@ -310,6 +311,26 @@ footer {
 }
 
 /* Responsive styles */
+@media (max-width: 1024px) {
+    .book-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-info, .book-image {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .book-info {
+        margin-bottom: 20px;
+    }
+
+    .book-image img {
+        max-width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
@@ -338,5 +359,23 @@ footer {
 
     nav a:last-child {
         border-bottom: none;
+    }
+
+    .book-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-info, .book-image {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .book-info {
+        margin-bottom: 20px;
+    }
+
+    .book-image img {
+        max-width: 100%;
     }
 }

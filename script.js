@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         logoText.style.transform = "scale(1)";
     }, 100);
 
-
     // Toggle navigation menu on hamburger menu click
     const hamburgerMenu = document.querySelector(".hamburger-menu");
     const nav = document.querySelector("nav");
@@ -39,23 +38,47 @@ document.addEventListener("DOMContentLoaded", function () {
     bookInfos.forEach((bookInfo) => {
         observer.observe(bookInfo);
     });
-});
 
-const bookContainers = document.querySelectorAll(".book-container");
+    const bookContainers = document.querySelectorAll(".book-container");
 
-const bookObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    },
-    {
-        threshold: 0.5, // Trigger when 50% of the element is visible
-    }
-);
+    const bookObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Trigger when 50% of the element is visible
+        }
+    );
 
-bookContainers.forEach((bookContainer) => {
-    bookObserver.observe(bookContainer);
+    bookContainers.forEach((bookContainer) => {
+        bookObserver.observe(bookContainer);
+    });
+
+    // Intersection Observer for news announcements
+    const newsAnnouncements = document.querySelector(".news-announcements");
+
+    const newsObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Trigger when 50% of the element is visible
+        }
+    );
+
+    newsObserver.observe(newsAnnouncements);
+
+    // Directly add transition effect to author details on page load
+    const authorDetails = document.querySelector(".author-details");
+    setTimeout(() => {
+        authorDetails.classList.add("visible");
+    }, 100);
 });

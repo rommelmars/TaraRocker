@@ -140,10 +140,30 @@ nav a.active {
     text-align: center;
     padding-left: 20px;
     position: absolute;
-    top: 30%; /* Center vertically */
+    top: 40%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Corrects the position to truly center */
     z-index: 10;
+}
+
+@keyframes swirl {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Media Queries for Responsiveness */

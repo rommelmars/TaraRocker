@@ -124,12 +124,25 @@ nav a.active {
     color: white; /* Change font color to white */
 }
 
-/* Animation for the title */
+.title-section {
+    padding: 20px 0;
+    background-color: #1e3a8a; /* Match the background color of the body */
+    color: white;
+}
+
 .animated-title {
-    background: linear-gradient(to right, rgb(172, 59, 59), rgb(201, 171, 115), yellow, green, blue, rgb(28, 179, 108), rgb(27, 151, 173));
+    background: linear-gradient(to right, rgb(226, 5, 116), rgb(35, 172, 87), rgb(209, 116, 9), green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: swirl 3s forwards;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin: 0;
+    text-align: center; /* Align text to the left */
+    padding-left: 20px; /* Add padding to the left */
+    position: absolute;
+    top: 160px; /* Adjust this value to move it higher */
+    left: 160px; /* Adjust if necessary */
+    z-index: 10; /* Ensure it stays above other elements */
 }
 
 @keyframes swirl {
@@ -143,7 +156,6 @@ nav a.active {
         transform: translateX(0) translateY(0) rotate(-360deg);
     }
 }
-
 /* Books section styles */
 .books-section {
     display: flex;

@@ -17,9 +17,11 @@ header {
     align-items: center;
     color: white;
     flex-wrap: wrap;
+    
 }
 
 .logo {
+    
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -27,6 +29,7 @@ header {
     text-transform: uppercase;
     color: white;
     font-family: 'Bona Nova SC', serif;
+    
 }
 
 .logo img {
@@ -37,7 +40,16 @@ header {
 .logo span {
     font-size: 3vw;
     color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.3), 6px 6px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 4px 4px 8px rgba(0, 0, 0, 0.4), 
+                 6px 6px 12px rgba(0, 0, 0, 0.3), 
+                 8px 8px 16px rgba(0, 0, 0, 0.2), 
+                 10px 10px 20px rgba(0, 0, 0, 0.1), 
+                 12px 12px 24px rgba(0, 0, 0, 0.1), 
+                 14px 14px 28px rgba(0, 0, 0, 0.1), 
+                 16px 16px 32px rgba(0, 0, 0, 0.1), 
+                 18px 18px 36px rgba(0, 0, 0, 0.1), 
+                 20px 20px 40px rgba(0, 0, 0, 0.1); /* Add more shadow */
     letter-spacing: 2px;
     opacity: 0;
     transform: scale(0.8);
@@ -114,15 +126,21 @@ nav a.active {
 
 /* Animation for the title */
 .animated-title {
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeInUp 2s ease forwards;
+    background: linear-gradient(to right, rgb(172, 59, 59), rgb(201, 171, 115), yellow, green, blue, rgb(28, 179, 108), rgb(27, 151, 173));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: swirl 3s forwards;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@keyframes swirl {
+    0% {
+        transform: translateX(-100%) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(0) translateY(-50%) rotate(-180deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(-360deg);
     }
 }
 
@@ -390,12 +408,12 @@ nav a.active {
 .author-details p {
     font-size: 1.2rem;
     line-height: 1.6;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;
     color: black; /* Change font color to black */
 }
 
 .author-description {
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;
 }
 
 .author-image {

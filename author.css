@@ -1,7 +1,7 @@
 /* General styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Calibri', sans-serif; 
     color: #fff;
     background-color: #1e3a8a;
 }
@@ -33,9 +33,18 @@ header {
 }
 
 .logo span {
-    font-size: 2.5rem;
+    font-size: 3vw;
     color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.3), 6px 6px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 4px 4px 8px rgba(0, 0, 0, 0.4), 
+                 6px 6px 12px rgba(0, 0, 0, 0.3), 
+                 8px 8px 16px rgba(0, 0, 0, 0.2), 
+                 10px 10px 20px rgba(0, 0, 0, 0.1), 
+                 12px 12px 24px rgba(0, 0, 0, 0.1), 
+                 14px 14px 28px rgba(0, 0, 0, 0.1), 
+                 16px 16px 32px rgba(0, 0, 0, 0.1), 
+                 18px 18px 36px rgba(0, 0, 0, 0.1), 
+                 20px 20px 40px rgba(0, 0, 0, 0.1); /* Add more shadow */
     letter-spacing: 2px;
     opacity: 0;
     transform: scale(0.8);
@@ -97,7 +106,7 @@ nav a.active {
 
 .author-details {
     max-width: 60%;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;  /* New York style font */
     color: black; /* Change font color to black */
     padding-right: 20px;
     flex: 1 1 300px;
@@ -115,14 +124,14 @@ nav a.active {
 .author-details h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;  /* New York style font */
     color: black; /* Change font color to black */
 }
 
 .author-details p {
     font-size: 1.2rem;
     line-height: 1.6;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;  /* New York style font */
     color: black; /* Change font color to black */
 }
 
@@ -159,7 +168,7 @@ nav a.active {
 .news-announcements h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;/* New York style font */
     color: black; /* Change font color to black */
 }
 
@@ -170,14 +179,14 @@ nav a.active {
 .news-item h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif; /* New York style font */
     color: black; /* Change font color to black */
 }
 
 .news-item p {
     font-size: 1.2rem;
     line-height: 1.6;
-    font-family: 'New York Font', sans-serif; /* New York style font */
+    font-family: 'Calibri', sans-serif;/* New York style font */
     color: black; /* Change font color to black */
 }
 

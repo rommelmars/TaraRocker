@@ -131,29 +131,48 @@ nav a.active {
 }
 
 .animated-title {
-    background: linear-gradient(to right, rgb(226, 5, 116), rgb(35, 172, 87), rgb(209, 116, 9), green, blue, indigo, violet);
+    background: linear-gradient(to right, rgb(226, 5, 116), rgb(35, 172, 87), rgb(255, 0, 0), green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: swirl 3s forwards;
-    font-size: 2.5rem; /* Adjust font size as needed */
+    font-size: 2.5rem; /* Default font size */
     margin: 0;
-    text-align: center; /* Align text to the left */
-    padding-left: 20px; /* Add padding to the left */
+    text-align: center;
+    padding-left: 20px;
     position: absolute;
-    top: 160px; /* Adjust this value to move it higher */
-    left: 160px; /* Adjust if necessary */
-    z-index: 10; /* Ensure it stays above other elements */
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Corrects the position to truly center */
+    z-index: 10;
 }
 
-@keyframes swirl {
-    0% {
-        transform: translateX(-100%) translateY(0) rotate(0deg);
+/* Media Queries for Responsiveness */
+
+/* For screens larger than 1200px (desktops and larger monitors) */
+@media (min-width: 1200px) {
+    .animated-title {
+        font-size: 3rem; /* Increase font size */
     }
-    50% {
-        transform: translateX(0) translateY(-50%) rotate(-180deg);
+}
+
+/* For screens between 768px and 1199px (tablets and medium screens) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .animated-title {
+        font-size: 2rem; /* Adjust font size */
     }
-    100% {
-        transform: translateX(0) translateY(0) rotate(-360deg);
+}
+
+/* For screens between 480px and 767px (small tablets and larger mobile devices) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .animated-title {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 479px) {
+    .animated-title {
+        font-size: 1.5rem; /* Further reduce font size */
     }
 }
 /* Books section styles */

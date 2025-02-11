@@ -199,6 +199,28 @@ nav a.active {
     text-decoration: underline;
 }
 
+/* Video section styles */
+.video-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light gray background color */
+    color: black;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Calibri', sans-serif; /* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.video-section video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer styles */
 footer {
     background: linear-gradient(180deg, #FFC0CB, #FF0000); /* Same color as header */

@@ -1,0 +1,282 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Calibri', sans-serif; 
+    color: #fff;
+    background-color: #1e3a8a;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Bona Nova SC', serif;
+}
+
+.logo img {
+    margin-right: 15px;
+    height: 80px;
+}
+
+.logo span {
+    font-size: 3vw;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 4px 4px 8px rgba(0, 0, 0, 0.4), 
+                 6px 6px 12px rgba(0, 0, 0, 0.3), 
+                 8px 8px 16px rgba(0, 0, 0, 0.2), 
+                 10px 10px 20px rgba(0, 0, 0, 0.1), 
+                 12px 12px 24px rgba(0, 0, 0, 0.1), 
+                 14px 14px 28px rgba(0, 0, 0, 0.1), 
+                 16px 16px 32px rgba(0, 0, 0, 0.1), 
+                 18px 18px 36px rgba(0, 0, 0, 0.1), 
+                 20px 20px 40px rgba(0, 0, 0, 0.1); /* Add more shadow */
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    font-family: 'Garamond', serif;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(153, 6, 244, 1);
+    color: #9906f4;
+}
+
+/* Active link styles */
+nav a.active {
+    color: #ff69b4; /* Pink color for active link */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 1);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Author details section styles */
+.author-details-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #e6e6fa; /* Light purple background color */
+    color: black;
+    flex-wrap: wrap;
+}
+
+.author-details {
+    max-width: 60%;
+    font-family: 'Calibri', sans-serif;  /* New York style font */
+    color: black; /* Change font color to black */
+    padding-right: 20px;
+    flex: 1 1 300px;
+    text-align: justify; /* Justify the text */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.author-details.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.author-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Calibri', sans-serif;  /* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.author-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Calibri', sans-serif;  /* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.author-images {
+    display: flex;
+    flex-direction: column; /* Arrange images vertically */
+    gap: 20px; /* Add space between the images */
+    align-items: center;
+}
+
+.author-image {
+    max-width: 300px; /* Set the max-width for each image */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* News & Announcements styles */
+.news-announcements {
+    padding: 40px 20px;
+    background-color: #ffe4e1; /* Light pink background color */
+    color: black;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.news-announcements.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-announcements h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Calibri', sans-serif;/* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Calibri', sans-serif; /* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.news-item p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Calibri', sans-serif;/* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.news-item a {
+    color: #ff69b4; /* Pink color for links */
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Video section styles */
+.video-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light gray background color */
+    color: black;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Calibri', sans-serif; /* New York style font */
+    color: black; /* Change font color to black */
+}
+
+.video-section video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000); /* Same color as header */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Garamond', serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav a:first-child {
+        border-top: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .author-details-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author-details {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .author-images {
+        margin-top: 20px;
+        justify-content: center; /* Center the images on smaller screens */
+    }
+
+    .author-image {
+        max-width: 100%; /* Ensure the images scale down on smaller screens */
+    }
+}

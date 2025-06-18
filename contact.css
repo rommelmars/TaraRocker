@@ -1,0 +1,293 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #e6e6fa; /* Light purple background color */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Bona Nova SC', serif;
+}
+
+.logo img {
+    margin-right: 15px;
+    height: 80px;
+}
+
+.logo span {
+    font-size: 3vw;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 4px 4px 8px rgba(0, 0, 0, 0.4), 
+                 6px 6px 12px rgba(0, 0, 0, 0.3), 
+                 8px 8px 16px rgba(0, 0, 0, 0.2), 
+                 10px 10px 20px rgba(0, 0, 0, 0.1), 
+                 12px 12px 24px rgba(0, 0, 0, 0.1), 
+                 14px 14px 28px rgba(0, 0, 0, 0.1), 
+                 16px 16px 32px rgba(0, 0, 0, 0.1), 
+                 18px 18px 36px rgba(0, 0, 0, 0.1), 
+                 20px 20px 40px rgba(0, 0, 0, 0.1); /* Add more shadow */
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    font-family: 'Garamond', serif;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(153, 6, 244, 1);
+    color: #9906f4;
+}
+
+/* Active link styles */
+nav a.active {
+    color: #ff69b4; /* Pink color for active link */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 1);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Contact section styles */
+.contact-section {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'New York Font', sans-serif; /* New York style font */
+}
+
+/* Contact Us button styles */
+.contact-section button {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #ff69b4; /* Pink text color */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border: 2px solid #ff69b4; /* Pink border */
+    background: transparent; /* Transparent background */
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background: #ff69b4; /* Pink background on hover */
+    color: #fff; /* White text color on hover */
+    box-shadow: 0 0 5px #ff69b4,
+                0 0 25px #ff69b4,
+                0 0 50px #ff69b4,
+                0 0 200px #ff69b4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.contact-section button span {
+    position: absolute;
+    display: block;
+}
+
+.contact-section button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff69b4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.contact-section button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff69b4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.contact-section button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff69b4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.contact-section button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff69b4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000); /* Same color as header */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Garamond', serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav a:first-child {
+        border-top: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+}

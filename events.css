@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    background-color: #87CEEB; /* Slightly darker blue background color */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Bona Nova SC', serif;
+}
+
+.logo img {
+    margin-right: 15px;
+    height: 80px;
+}
+
+.logo span {
+    font-size: 3vw;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 4px 4px 8px rgba(0, 0, 0, 0.4), 
+                 6px 6px 12px rgba(0, 0, 0, 0.3), 
+                 8px 8px 16px rgba(0, 0, 0, 0.2), 
+                 10px 10px 20px rgba(0, 0, 0, 0.1), 
+                 12px 12px 24px rgba(0, 0, 0, 0.1), 
+                 14px 14px 28px rgba(0, 0, 0, 0.1), 
+                 16px 16px 32px rgba(0, 0, 0, 0.1), 
+                 18px 18px 36px rgba(0, 0, 0, 0.1), 
+                 20px 20px 40px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    font-family: 'Garamond', serif;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(153, 6, 244, 1);
+    color: #9906f4;
+}
+
+/* Active link styles */
+nav a.active {
+    color: #ff69b4; /* Pink color for active link */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 1);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* Event Section */
+.event-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.event-section h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Crimson Text', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding colorful styling to Manila International Book Fair title */
+.book-fair-title {
+    background: linear-gradient(90deg, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #EE82EE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.event-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-description {
+    flex: 1;
+    min-width: 300px;
+}
+
+.event-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-details {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Prime Spot Display Section */
+.prime-spot {
+    margin-top: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                url('images/pattern-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 15px;
+    padding: 60px 20px;
+}
+
+.prime-spot-title {
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.prime-spot h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0 40px 0;
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.video-container {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(180deg, #FFC0CB, #FF0000);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Garamond', serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav a:first-child {
+        border-top: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .event-section h2 {
+        font-size: 2rem;
+    }
+    
+    .prime-spot h3 {
+        font-size: 1.8rem;
+    }
+
+    .event-content {
+        flex-direction: column;
+    }
+}
